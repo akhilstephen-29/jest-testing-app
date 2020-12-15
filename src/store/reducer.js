@@ -1,9 +1,10 @@
 
-import { ADD_COUNTER } from "../utils/constants";
-import {addCounter} from "./actions.js";
+import { ADD_COUNTER, GET_POSTS } from "../utils/constants";
+import {addCounter, getPosts} from "./actions.js";
 
 const initialState ={
-  counter : 0
+  counter : 0,
+  posts: {}
 }
 
 const reducer = (state = initialState, action ) => {
@@ -11,6 +12,8 @@ const reducer = (state = initialState, action ) => {
   switch(action.type){
     case ADD_COUNTER:
       return Object.assign({}, state, {counter: action.payload})
+    case GET_POSTS:
+      return Object.assign({}, state, {posts: action.payload})
     default:  return state;
   }
 
@@ -24,6 +27,7 @@ export function mapStateToProps(state) {
 
 export function mapDispatchToProps(dispatch){
   return {
-    addCounter: counter => dispatch(addCounter(counter))
+    addCounter: counter => dispatch(addCounter(counter)),
+    getPosts: posts => dispatch(getPosts(posts))
   }
 }

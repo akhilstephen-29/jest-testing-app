@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add Functions [SNAPSHOT TEST ADD] 1`] = `
+<div
+  className="App"
+>
+  <h1>
+    Add Function
+  </h1>
+  <h4>
+    5
+  </h4>
+  <button
+    onClick={[Function]}
+  >
+    Submit
+  </button>
+</div>
+`;
